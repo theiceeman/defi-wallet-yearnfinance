@@ -1,0 +1,28 @@
+{
+  "name": "defi-wallet-yearnfinance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.1",
+    "hardhat": "^2.8.2"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.0"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "coverage": "npx hardhat coverage --testfiles 'test/*.js' ",
+    "console": "npx hardhat console --network localhost",
+    "server": "npx hardhat node",
+    "clean": "npx hardhat clean",
+    "compile": "npx hardhat compile",
+    "test": "hardhat test --network hardhat",
+    "test:token": "hardhat test --network hardhat ./test/LinkToken-test.js",
+    "deploy:localhost": "npx hardhat run --network localhost scripts/run.js"
+  }
+}
